@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netory</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #2563eb;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      margin-left: 24px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      padding: 120px 0;
+      text-align: center;
+      background: linear-gradient(to bottom, #ffffff, #eef4ff);
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #666;
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: white;
+      border: 1px solid #ddd;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background: #f3f4f6;
+    }
+
+    .features {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 60px;
+      font-weight: 800;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 36px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: 0.25s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .feature-card h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: #111;
+    }
+
+    .feature-card p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    .about {
+      padding: 100px 0;
+      background: white;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      color: #555;
+    }
+
+    footer {
+      background: #111827;
+      color: #cbd5e1;
+      padding: 50px 0;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .footer-content h2 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      margin-top: 20px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 0 12px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Netory</div>
+
+      <nav>
+        <a href="#">소개</a>
+        <a href="#">기능</a>
+        <a href="#">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>
+        연락처를 더 쉽고 빠르게<br />
+        찾는 새로운 방법
+      </h1>
+
+      <p>
+        Netory는 연락처를 그룹별로 정리하고,
+        원하는 사람을 빠르게 탐색할 수 있도록 도와주는
+        스마트 연락처 관리 플랫폼입니다.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">앱 다운로드</a>
+        <a href="#" class="btn btn-secondary">자세히 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+
+      <h2 class="section-title">
+        주요 기능
+      </h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <h3>빠른 연락처 검색</h3>
+          <p>
+            이름, 그룹, 키워드 기반으로
+            원하는 연락처를 빠르게 탐색할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>그룹 관리</h3>
+          <p>
+            가족, 친구, 업무, 거래처 등
+            다양한 그룹으로 체계적인 관리가 가능합니다.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>간편한 UI</h3>
+          <p>
+            누구나 쉽게 사용할 수 있도록
+            직관적인 인터페이스를 제공합니다.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+
+      <h2 class="section-title">
+        Netory 소개
+      </h2>
+
+      <p>
+        Netory는 복잡한 연락처 관리의 불편함을 해결하기 위해 만들어졌습니다.
+        연락처를 더 효율적으로 정리하고 빠르게 찾을 수 있도록 설계되었으며,
+        사용자 중심의 간단하고 편리한 경험을 제공합니다.
+      </p>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
+
+      <h2>Netory</h2>
+
+      <p>
+        © 2026 Netory. All Rights Reserved.
+      </p>
+
+      <div class="footer-links">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+        <a href="#">고객문의</a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
